@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Header</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Header</ion-title>
+      <ion-nav>klik saya</ion-nav>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card>
+<ion-card-content>
+  <ion-item>
+<ion-label position="floating">Nama Lengkap</ion-label>
+<ion-input [(ngModel)]="info.fullname" type="text"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Email</ion-label>
+<ion-input [(ngModel)]="info.email" type="email"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating" type="email">Tanggal Lahir</ion-label>
+<ion-datetime value="2019-10-01T15:43:40.394Z" [(ngModel)]="info.dob" display-
+  timezone="utc"></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-button color="success" (click)="saveData()" expand="block">Submit</ion-button>
+</ion-item>
+<ion-item>
+  <ion-button color="warning" (click)="scorePage()" expand="block">Score Apps</ion-button>
+</ion-item>
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+<ion-footer>
+<ion-toolbar color="secondary">
+<ion-title>Footer</ion-title>
+</ion-toolbar>
+</ion-footer>
